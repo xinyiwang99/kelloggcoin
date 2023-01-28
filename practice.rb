@@ -38,7 +38,7 @@ loop do
      kelloggCoin [blockchain[index]["from_user"]] = kelloggCoin [blockchain[index]["from_user"]] - blockchain[index]["amount"]
   end
   if kelloggCoin [blockchain[index]["to_user"]] != nil
- kelloggCoin [blockchain[index]["to_user"]] = kelloggCoin [blockchain[index]["to_user"]] + blockchain[index]["amount"]
+     kelloggCoin [blockchain[index]["to_user"]] = kelloggCoin [blockchain[index]["to_user"]] + blockchain[index]["amount"]
   end
  index = index + 1
 end
