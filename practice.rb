@@ -27,3 +27,27 @@ blockchain = [
 # Anthony's KelloggCoin balance is 2650
 
 # 👇👇👇 Your code HERE 👇👇👇
+
+index = 0
+kelloggCoin = { "ben"=> 0, "brian"=> 0, "evan" => 0,"anthony" => 0}
+loop do
+  if index == blockchain.size
+    break
+  end
+  if kelloggCoin [blockchain[index]["from_user"]] != nil
+     kelloggCoin [blockchain[index]["from_user"]] = kelloggCoin [blockchain[index]["from_user"]] - blockchain[index]["amount"]
+  end
+  if kelloggCoin [blockchain[index]["to_user"]] != nil
+ kelloggCoin [blockchain[index]["to_user"]] = kelloggCoin [blockchain[index]["to_user"]] + blockchain[index]["amount"]
+  end
+ index = index + 1
+end
+account = ["ben","brian","evan","anthony"]
+count = 0
+loop do
+  if count == account.size
+    break
+  end
+  puts "#{account[count]}'s KelloggCoin balance is #{kelloggCoin[account[count]]}"
+  count = count + 1
+end 
